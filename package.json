@@ -1,6 +1,6 @@
 {
   "name": "be-current",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "keywords": [
     "web-components",
     "web-component",
@@ -11,7 +11,7 @@
   "description": "Keep the element it adorns up-to-date with the current entry of navigation state",
   "main": "be-current.js",
   "module": "be-current.js",
-  "exports":{
+  "exports": {
     ".": "./be-current.js",
     "./be-current.js": "./be-current.js"
   },
