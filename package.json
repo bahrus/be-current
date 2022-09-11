@@ -1,8 +1,34 @@
 {
   "name": "be-current",
   "version": "0.0.0",
-  "description": "",
-  "main": "index.js",
+  "keywords": [
+    "web-components",
+    "web-component",
+    "custom-element",
+    "custom-elements",
+    "navigation-api"
+  ],
+  "description": "Keep the element it adorns up-to-date with the current entry of navigation state",
+  "main": "be-current.js",
+  "module": "be-current.js",
+  "exports":{
+    ".": "./be-current.js",
+    "./be-current.js": "./be-current.js"
+  },
+  "dependencies": {
+    "be-decorated": "0.0.155",
+    "be-hive": "0.0.63"
+  },
+  "devDependencies": {
+    "may-it-serve": "0.0.2",
+    "@skypack/package-check": "0.2.2",
+    "@custom-elements-manifest/analyzer": "0.6.4",
+    "be-counted": "0.0.1"
+  },
+  "files": [
+    "*.*"
+  ],
+  "types": "types.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
