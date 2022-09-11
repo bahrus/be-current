@@ -28,7 +28,7 @@ which is shorthand for:
         },
         "observeWinObj": "navigation",
         "on": "navigate",
-        "vft": "currentEntries.getState|.cotus.house.impeachmentCount"
+        "vft": "currentEntry.getState|.cotus.house.impeachmentCount"
     }
 }'></cotus-potus>
 ```

@@ -18,13 +18,15 @@
   "dependencies": {
     "be-decorated": "0.0.155",
     "be-hive": "0.0.63",
-    "be-observant": "0.0.139"
+    "be-observant": "0.0.139",
+    "trans-render": "0.0.596"
   },
   "devDependencies": {
     "may-it-serve": "0.0.2",
     "@skypack/package-check": "0.2.2",
     "@custom-elements-manifest/analyzer": "0.6.4",
-    "be-counted": "0.0.1"
+    "be-counted": "0.0.1",
+    "be-transactional": "0.0.18"
   },
   "files": [
     "*.*"

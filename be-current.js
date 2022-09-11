@@ -11,7 +11,7 @@ export class BeCurrent extends BeObservant {
                     path: s
                 }
             },
-            vft: 'currentState.getState|.' + s
+            vft: 'currentEntry.getState|.' + s
         };
     }
 }

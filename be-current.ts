@@ -13,7 +13,7 @@ export class BeCurrent extends BeObservant implements Actions{
                     path: s
                 }
             },
-            vft: 'currentState.getState|.' + s
+            vft: 'currentEntry.getState|.' + s
         } as IObserve;
         
     }
