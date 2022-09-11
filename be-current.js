@@ -1,10 +1,8 @@
-import {define, BeDecoratedProps} from 'be-decorated/be-decorated.js';
-import {Actions, VirtualProps} from './types';
-import {register} from "be-hive/register.js";
-import {BeObservant, IObserve} from 'be-observant/be-observant.js';
-
-export class BeCurrent extends BeObservant implements Actions{
-    override async toIObserve(s: string): Promise<IObserve<any, any, Event>> {
+import { define } from 'be-decorated/be-decorated.js';
+import { register } from "be-hive/register.js";
+import { BeObservant } from 'be-observant/be-observant.js';
+export class BeCurrent extends BeObservant {
+    async toIObserve(s) {
         return {
             observeWinObj: 'navigation',
             on: 'navigate',
@@ -14,21 +12,16 @@ export class BeCurrent extends BeObservant implements Actions{
                 }
             },
             vft: 'currentState.getState|.' + s
-        } as IObserve;
-        
+        };
     }
 }
-
 const tagName = 'be-current';
-
 const ifWantsToBe = 'current';
-
 const upgrade = '*';
-
-define<VirtualProps & BeDecoratedProps<VirtualProps, Actions>, Actions>({
-    config:{
+define({
+    config: {
         tagName,
-        propDefaults:{
+        propDefaults: {
             upgrade,
             ifWantsToBe,
             intro: 'intro',
@@ -38,9 +31,8 @@ define<VirtualProps & BeDecoratedProps<VirtualProps, Actions>, Actions>({
             virtualProps: []
         }
     },
-    complexPropDefaults:{
+    complexPropDefaults: {
         controller: BeCurrent
     }
 });
-
 register(ifWantsToBe, upgrade, tagName);
