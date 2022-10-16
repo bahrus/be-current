@@ -27,7 +27,7 @@
     "@skypack/package-check": "0.2.2",
     "@custom-elements-manifest/analyzer": "0.6.4",
     "be-counted": "0.0.7",
-    "be-transactional": "0.0.21"
+    "be-transactional": "0.0.22"
   },
   "files": [
     "*.*"
