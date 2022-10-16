@@ -1,4 +1,4 @@
-import {define, BeDecoratedProps} from 'be-decorated/be-decorated.js';
+import {define, BeDecoratedProps} from 'be-decorated/DE.js';
 import {Actions, VirtualProps} from './types';
 import {register} from "be-hive/register.js";
 import {BeObservant, IObserve} from 'be-observant/be-observant.js';
@@ -31,7 +31,6 @@ define<VirtualProps & BeDecoratedProps<VirtualProps, Actions>, Actions>({
         propDefaults:{
             upgrade,
             ifWantsToBe,
-            intro: 'intro',
             noParse: true,
             forceVisible: ['template', 'script', 'style'],
             finale: 'finale',

@@ -1,4 +1,4 @@
-import { define } from 'be-decorated/be-decorated.js';
+import { define } from 'be-decorated/DE.js';
 import { register } from "be-hive/register.js";
 import { BeObservant } from 'be-observant/be-observant.js';
 export class BeCurrent extends BeObservant {
@@ -24,7 +24,6 @@ define({
         propDefaults: {
             upgrade,
             ifWantsToBe,
-            intro: 'intro',
             noParse: true,
             forceVisible: ['template', 'script', 'style'],
             finale: 'finale',

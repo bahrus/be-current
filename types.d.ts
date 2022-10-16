@@ -11,6 +11,5 @@ export interface ProxyProps extends VirtualProps{
 export type PP = ProxyProps;
 
 export interface Actions{
-    intro(proxy: Element & VirtualProps, target: Element, beDecorProps: BeDecoratedProps): void;
     finale(proxy: Element & VirtualProps, target:Element): void;
 }
