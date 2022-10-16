@@ -5,6 +5,7 @@ import {BeObservant, IObserve} from 'be-observant/be-observant.js';
 
 export class BeCurrent extends BeObservant implements Actions{
     override async toIObserve(s: string): Promise<IObserve<any, any, Event>> {
+        console.log('toIObserve');
         return {
             observeWinObj: 'navigation',
             on: 'navigate',
@@ -31,10 +32,15 @@ define<VirtualProps & BeDecoratedProps<VirtualProps, Actions>, Actions>({
         propDefaults:{
             upgrade,
             ifWantsToBe,
-            noParse: true,
             forceVisible: ['template', 'script', 'style'],
             finale: 'finale',
-            virtualProps: []
+            //duplicated settings with beobservant
+            virtualProps: ['props'],
+            primaryProp: 'props',
+            primaryPropReq: true,
+        },
+        actions: {
+            onProps: 'props',
         }
     },
     complexPropDefaults:{

@@ -3,6 +3,7 @@ import { register } from "be-hive/register.js";
 import { BeObservant } from 'be-observant/be-observant.js';
 export class BeCurrent extends BeObservant {
     async toIObserve(s) {
+        console.log('toIObserve');
         return {
             observeWinObj: 'navigation',
             on: 'navigate',
@@ -24,10 +25,15 @@ define({
         propDefaults: {
             upgrade,
             ifWantsToBe,
-            noParse: true,
             forceVisible: ['template', 'script', 'style'],
             finale: 'finale',
-            virtualProps: []
+            //duplicated settings with beobservant
+            virtualProps: ['props'],
+            primaryProp: 'props',
+            primaryPropReq: true,
+        },
+        actions: {
+            onProps: 'props',
         }
     },
     complexPropDefaults: {

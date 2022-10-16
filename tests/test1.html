@@ -7,16 +7,17 @@
     <title>Document</title>
 </head>
 <body>
-    <button be-counted be-transactional='{
+    <button id=btn be-counted be-transactional='{
         "be-decorated.counted.value-changed": {
             "path": "a.b.c", 
             "vft": "beDecorated.counted.value"
         }
     }'>Count</button>
 
-    <span be-current='{
+    <span id=output be-current='{
         "textContent": "a.b.c"
     }'></span>
+    <div id=target></div>
     <script type=importmap>
         {
             "imports": {
@@ -35,6 +36,19 @@
         import 'be-transactional/be-transactional.js';
         import 'be-counted/be-counted.js';
         import 'be-current/be-current.js';
+    </script>
+    <script>
+        function runScript(){
+            btn.click();
+            setTimeout(() => {
+                if(output.textContent === '1'){
+                    target.setAttribute('mark', 'good');
+                }
+            }, 10); 
+        }
+        setTimeout(() => {
+            runScript();
+        }, 2000);
     </script>
 </body>
 </html>

@@ -1,6 +1,9 @@
 import {BeDecoratedProps, MinimalProxy} from 'be-decorated/types';
+import {EndUserProps as BeObservantEndUserProps, Actions as BeObservantActions} from 'be-observant/types';
 
-export interface VirtualProps extends MinimalProxy{}
+export interface EndUserProps extends BeObservantEndUserProps{}
+
+export interface VirtualProps extends EndUserProps, MinimalProxy{}
 
 export type Proxy = Element & VirtualProps;
 
@@ -10,6 +13,6 @@ export interface ProxyProps extends VirtualProps{
 
 export type PP = ProxyProps;
 
-export interface Actions{
+export interface Actions extends BeObservantActions{
     finale(proxy: Element & VirtualProps, target:Element): void;
 }
