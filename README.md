@@ -1,4 +1,4 @@
-# be-current [TODO]
+# be-current (🔌)
 
 be-current updates the meta element it adorns with the up-to-date value of the current entry of navigation state.
 
